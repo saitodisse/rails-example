@@ -14,7 +14,10 @@ systems({
       "bundle install --path vendor/bundler",
     ],
     // command: "rails server --port $HTTP_PORT",
-    command: "bundle exec rackup config.ru --port $HTTP_PORT",
+    command: [
+      "bundle install --path vendor/bundler",
+      "bundle exec rackup config.ru --port $HTTP_PORT"
+    ].join(';'),
     mounts: {
       '/azk/#{manifest.dir}': path("."),
     },
