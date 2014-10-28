@@ -114,7 +114,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  execjs
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.6)
